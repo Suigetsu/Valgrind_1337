@@ -48,8 +48,11 @@ Then run this command which I'll break it down to you:
 docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind/1337
 ```
 run: to run the container with the tag valgrind/1337.
+
 -it: to run the container in an interactive mode. This means you can execute commands inside the container while it is still running and to have a bash shell prompt.
+
 --rm: to delete the container once we use the command `exit`.
+
 -v: to mount the folder where our program exist from the host to the container. it means that any change made inside the container will be visible outside of. And vice versa.
 
 ## How to use Valgrind:
