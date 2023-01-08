@@ -57,3 +57,5 @@ docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind/1337
 
 ## How to use Valgrind:
 Now all you have to is to compile your project, and run the command `valgrind ./the_executable_file`
+
+PS: don't forget to change the MLX flags in your makefile to `-lmlx -lXext -lX11 ` if you're trying to test a program that uses the MLX library.
