@@ -6,7 +6,8 @@ RUN		apt-get update -y \
 				sudo \
 				make \
 				cmake \
-				valgrind
+				valgrind \
+				vim
 
 # MLX Configuration + dependencies required for MLX to work on Linux
 RUN		apt-get install -y xorg \
