@@ -58,4 +58,7 @@ docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind/1337
 ## How to use Valgrind:
 Now all you have to is to compile your project, and run the command `valgrind ./the_executable_file`
 
+## How to use GDB:
+Run docker with the flags: ``` --cap-add=SYS_PTRACE --security-opt seccomp=unconfined ``` before the ``` -it --rm ``` flags.
+
 PS: don't forget to change the MLX flags in your makefile to `-lmlx -lXext -lX11 ` if you're trying to compile and test a program that uses the MLX library.
