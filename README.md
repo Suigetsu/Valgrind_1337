@@ -61,4 +61,7 @@ Now all you have to is to compile your project, and run the command `valgrind ./
 ## How to use GDB:
 Run docker with the flags: ``` --cap-add=SYS_PTRACE --security-opt seccomp=unconfined ``` before the ``` -it --rm ``` flags.
 
+## UPDATES 23/08/2023
+Debian image doesn't want to work anymore, therefore I used this opportunity to switch to Alpine since it's light weight, simple and efficient.
+
 PS: don't forget to change the MLX flags in your makefile to `-lmlx -lXext -lX11 ` if you're trying to compile and test a program that uses the MLX library.
