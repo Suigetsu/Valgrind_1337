@@ -1,21 +1,21 @@
-FROM	debian:latest
+FROM	alpine:3.14
 
-RUN		apt-get update -y \
-		&& apt-get upgrade -y \
-		&& apt-get install -y git \
-				sudo \
-				make \
-				cmake \
-				valgrind \
-				vim
+RUN		apk add --update --no-cache \
+    file \
+    make \
+    gcc \
+    g++ \
+    python3 \
+    wget \
+    linux-headers \
+    openssl-dev \
+    lzo-dev \
+    linux-pam-dev
 
-# MLX Configuration + dependencies required for MLX to work on Linux
-RUN		apt-get install -y xorg \
-				libxext-dev \
-				zlib1g-dev \
-				libbsd-dev \
-		&& git clone https://github.com/42Paris/minilibx-linux.git mlx \
-		&& cd mlx \
-		&& ./configure \
-		&& cp libmlx.a /usr/local/lib/ \
-		&& cp mlx.h /usr/local/include/mlx.h
+RUN		apk add --update --no-cache git \
+		sudo \
+		make \
+		cmake \
+		valgrind \
+		vim \
+        bash
