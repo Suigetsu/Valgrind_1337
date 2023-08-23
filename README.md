@@ -63,5 +63,3 @@ Run docker with the flags: ``` --cap-add=SYS_PTRACE --security-opt seccomp=uncon
 
 ## UPDATES 23/08/2023
 Debian image doesn't want to work anymore, therefore I used this opportunity to switch to Alpine since it's light weight, simple and efficient.
-
-PS: don't forget to change the MLX flags in your makefile to `-lmlx -lXext -lX11 ` if you're trying to compile and test a program that uses the MLX library.
