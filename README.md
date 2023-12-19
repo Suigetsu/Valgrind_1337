@@ -27,7 +27,7 @@ An example of Valgrind output:
 ## How to install Docker on your Machine:
 Go to the Managed Softwar Center and download Docker from there.
 ![MSC](https://i.imgur.com/TjmwlqF.png)
-Before launching Docker, we need to make sure it's stored in `goinfre` folder. To do that:
+Before launching Docker, we need to make sure it's Caches folder stored in `goinfre` folder. To do that:
 ```
 cd goinfre
 mkdir docker
@@ -43,7 +43,7 @@ Clone the Dockerfile that I made to build the docker image with the latest debia
 docker build -t valgrind/1337 .
 ```
 You'll need some time until Docker download debian and the other dependencies.
-Then run this command which I'll break it down to you:
+Then run this command which I'll break down to you:
 ```
 docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind/1337
 ```
@@ -60,6 +60,3 @@ Now all you have to is to compile your project, and run the command `valgrind ./
 
 ## How to use GDB:
 Run docker with the flags: ``` --cap-add=SYS_PTRACE --security-opt seccomp=unconfined ``` before the ``` -it --rm ``` flags.
-
-## UPDATES 23/08/2023
-Debian image doesn't want to work anymore, therefore I used this opportunity to switch to Alpine since it's light weight, simple and efficient.
