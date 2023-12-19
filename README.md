@@ -55,6 +55,10 @@ docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind/1337
 
 * -v: to mount the folder where our program exist from the host to the container. it means that any change made inside the container will be visible outside of. And vice versa.
 
+Simple example of the output:
+<img width="1032" alt="image" src="https://github.com/Suigetsu/Valgrind_1337/assets/57911923/fa0c60bf-7fc3-4edb-8417-6943926c9c15">
+
+
 ## How to use Valgrind:
 Now all you have to is to compile your project, and run the command `valgrind ./the_executable_file`
 
