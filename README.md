@@ -81,6 +81,8 @@ doc () {
 }
 ```
 
+after doing so, reload your .zshrc configuration file by using ``` source ~/.zshrc ```
+
 Simple example of the output:
 <img width="1032" alt="image" src="https://github.com/Suigetsu/Valgrind_1337/assets/57911923/fa0c60bf-7fc3-4edb-8417-6943926c9c15">
 
