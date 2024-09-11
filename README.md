@@ -5,7 +5,7 @@ How to run Valgrind on your 1337 session using Docker.
 ## First of all, what is Valgrind?
 
 Valgrind is an open source tool used for memory debugging, memory leak detection and profiling. It's also used for building dynamic analysis tools such as checkers and profilers.
-[Official website](https://valgrind.org/).
+[Official site](https://valgrind.org/).
 [Read more](https://en.wikipedia.org/wiki/Valgrind)
 
 An example of Valgrind output:
