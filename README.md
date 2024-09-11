@@ -10,8 +10,7 @@ Valgrind is an open source tool used for memory debugging, memory leak detection
 
 An example of Valgrind output:
 
-```
-==8== HEAP SUMMARY:
+```==8== HEAP SUMMARY:
 ==8==     in use at exit: 1,322 bytes in 12 blocks
 ==8==   total heap usage: 53 allocs, 41 frees, 3,238 bytes allocated
 ==8==
@@ -26,16 +25,15 @@ An example of Valgrind output:
 
 ## What is Docker?
 
-> Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. The service has both free and premium tiers. The software that hosts the containers is called Docker Engine. It was first started in 2013 and is developed by Docker, Inc. _[Read more](<https://en.wikipedia.org/wiki/Docker_(software)>).\_ _[Official Website](https://www.docker.com/)._
+> Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers. The service has both free and premium tiers. The software that hosts the containers is called Docker Engine. It was first started in 2013 and is developed by Docker, Inc. [Read more](<https://en.wikipedia.org/wiki/Docker_(software)>). [Official Website](https://www.docker.com/).
 
-## How to install Docker on your Machine:
+## How to install Docker on your Machine
 
 Go to the Managed Softwar Center and download Docker from there.
 ![MSC](https://i.imgur.com/TjmwlqF.png)
 Before launching Docker, we need to make sure it's Caches folder stored in `goinfre` folder. To do that:
 
-```
-cd goinfre
+```cd goinfre
 mkdir docker
 rm -rf ~/Library/Containers/com.docker.docker
 ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
@@ -44,18 +42,18 @@ ln -s ~/goinfre/docker ~/Library/Containers/com.docker.docker
 Now you can launch Docker. Wait until the program says that it's running
 ![runningdocker](https://i.imgur.com/vppdEwm.png)
 
-## How to Mount your project to the Docker container:
+## How to Mount your project to the Docker container
 
 Clone the Dockerfile that I made to build the docker image with the latest debian. The file also includes Valgrind and the dependencies needed for MLX Linux (You'll only have to run this command once):
 
-```
+``` 
 docker build -t valgrind/1337 .
 ```
 
 You'll need some time until Docker download debian and the other dependencies.
 Then run this command which I'll break down to you:
 
-```
+``` 
 docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind/1337
 ```
 
@@ -69,7 +67,7 @@ docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind/1337
 
 You can add this function to your ~/.zshrc so you can just run `doc <your_directory>` instead.
 
-```
+``` 
 doc () {
 	if [ -z "$1" ]; then
 		echo "Usage: doc <your_directory>"
@@ -86,10 +84,10 @@ after doing so, reload your .zshrc configuration file by using ``` source ~/.zsh
 Simple example of the output:
 <img width="1032" alt="image" src="https://github.com/Suigetsu/Valgrind_1337/assets/57911923/fa0c60bf-7fc3-4edb-8417-6943926c9c15">
 
-## How to use Valgrind:
+## How to use Valgrind
 
 Now all you have to is to compile your project, and run the command `valgrind ./the_executable_file`
 
-## How to use GDB:
+## How to use GDB
 
 Run docker with the flags: `--cap-add=SYS_PTRACE --security-opt seccomp=unconfined` before the `-it --rm` flags.
