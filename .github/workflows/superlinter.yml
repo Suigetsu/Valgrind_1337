@@ -15,3 +15,4 @@ jobs:
               env:
                   DEFAULT_BRANCH: main
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  LINTER_RULES_PATH: ../../.hadolinter.yml
