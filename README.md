@@ -46,14 +46,14 @@ Now you can launch Docker. Wait until the program says that it's running
 
 Clone the Dockerfile that I made to build the docker image with the latest debian. The file also includes Valgrind and the dependencies needed for MLX Linux (You'll only have to run this command once):
 
-``` 
+```x
 docker build -t valgrind/1337 .
 ```
 
 You'll need some time until Docker download debian and the other dependencies.
 Then run this command which I'll break down to you:
 
-``` 
+```x
 docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind/1337
 ```
 
@@ -67,15 +67,15 @@ docker run -it --rm -v ~/ThePathToYourFolder:/valgrind valgrind/1337
 
 You can add this function to your ~/.zshrc so you can just run `doc <your_directory>` instead.
 
-``` 
-doc () {
-	if [ -z "$1" ]; then
-		echo "Usage: doc <your_directory>"
-		return 1;
-	fi
+```x
+doc (){
+ if [ -z "$1" ]; then
+  echo "Usage: doc <your_directory>"
+  return 1;
+ fi
 
-	local my_variable="$1"
-	docker run -it --rm -v ~/Desktop/${my_variable}:/valgrind valgrind/1337
+ local my_variable="$1"
+ docker run -it --rm -v ~/Desktop/${my_variable}:/valgrind valgrind/1337
 }
 ```
 
