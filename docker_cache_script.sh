@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ ! -d " "$HOME"/goinfre/docker" ]; then
+if [ ! -d """$HOME""/goinfre/docker" ]; then
     mkdir "$HOME"/goinfre/docker
     rm -rf "$HOME"/Library/Containers/com.docker.docker
     ln -s "$HOME"/goinfre/docker "$HOME"/Library/Containers/com.docker.docker
