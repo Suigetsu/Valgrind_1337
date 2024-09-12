@@ -31,7 +31,10 @@ An example of Valgrind output:
 
 Go to the Managed Softwar Center and download Docker from there.
 ![MSC](https://i.imgur.com/TjmwlqF.png)
-Before launching Docker, we need to make sure it's Caches folder stored in `goinfre` folder. To do that, use the script docker_cache_script.sh.
+
+## Clear Docker Cache if you're using 42/1337 sessions
+Before launching Docker, we need to make sure it's Caches folder stored in `goinfre` folder. This way you won't go out of storage. To do that, use the script docker_cache_script.sh.
+
 Now you can launch Docker. Wait until the program says that it's running
 
 ![runningdocker](https://i.imgur.com/vppdEwm.png)
